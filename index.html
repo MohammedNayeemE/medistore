@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Medico Store</title>
+		<link rel="stylesheet" href="index.css">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				darkMode: 'class',
+		}
+		</script>	
+		<link rel="icon" href="stethoscope.ico">
+	</head>
+	<body class="font-[Open_Sans] bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+		<header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow border-b border-gray-200 dark:border-gray-700">
+			<div class="flex flex-col md:flex-row items-center justify-evenly px-6 py-4 gap-4">
+
+				<!-- Logo -->
+				<div class="flex items-center gap-2">
+					<div class="text-green-600 text-3xl font-bold">🩺</div>
+					<h1 class="text-2xl md:text-3xl font-bold text-green-700">
+						Medico <span class="text-gray-700">Store</span>
+					</h1>
+				</div>
+
+				<!-- Delivery Address -->
+				<div class="flex items-center gap-2 text-gray-700 dark:text-gray-200 cursor-pointer">
+					📍
+					<div class="flex flex-col leading-tight">
+						<span class="text-xs text-gray-500">Deliver to</span>
+						<span class="font-semibold text-sm md:text-base">Bengaluru, 560001</span>
+					</div>
+				</div>
+
+				<!-- Search Bar -->
+				<div class="flex items-center w-full md:w-1/2">
+					<select class="border rounded-l px-4 py-3 text-base text-gray-600 dark:bg-gray-700 dark:text-gray-200">
+						<option>All Categories</option>
+						<option>Medicines</option>
+						<option>Health Products</option>
+					</select>
+					<input type="text" placeholder="Search..." 
+						class="w-full border-t border-b px-4 py-3 text-base outline-none dark:bg-gray-700 dark:text-gray-200">
+					<button class="bg-green-600 px-5 py-3 rounded-r text-white text-lg hover:bg-green-700">🔍</button>
+				</div>
+
+
+				<div class="flex items-center gap-6 text-gray-600 text-2xl cursor-pointer">
+					<!-- Offers Icon -->
+					<div class="relative group">
+						<i class="fa-solid fa-tags hover:text-gray-800 transition"></i>
+						<!-- Badge -->
+						<span class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">5</span>
+						<!-- Tooltip -->
+						<span class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">
+							Offers
+						</span>
+					</div>
+					<!-- Cart Icon -->
+					<div class="relative group">
+						<i class="fa-solid fa-cart-shopping hover:text-gray-800 transition"></i>
+						<!-- Badge -->
+						<span class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">3</span>
+						<!-- Tooltip -->
+						<span class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">
+							Cart
+						</span>
+					</div>
+
+					<!-- User Icon -->
+					<div class="relative group">
+						<i class="fa-solid fa-user hover:text-gray-800 transition"></i>
+						<!-- Tooltip -->
+						<span class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">
+							Profile
+						</span>
+					</div>
+					<!--<button-->
+					<!--	onclick="toggleTheme()"-->
+					<!--	class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-300 hover:scale-110 transition"-->
+					<!--	id = "togglebtn"-->
+					<!-->
+					<!--	<i class="fa-solid fa-sun dark:hidden"></i>-->
+					<!--	<i class="fa-solid fa-moon hidden dark:inline"></i>-->
+					<!--</button>-->
+
+				</div>
+			</div>
+
+			<!-- Nav Links -->
+			<nav class="flex flex-wrap justify-center gap-4 md:gap-6 text-lg text-gray-700 py-3 border-t">
+				<a href="#" class="hover:text-green-600">Pain Relief</a>
+				<a href="#" class="hover:text-green-600">Cold and Flu</a>
+				<a href="#" class="hover:text-green-600">Diabetes Care</a>
+				<a href="#" class="hover:text-green-600">Digestive Health</a>
+				<a href="#" class="hover:text-green-600">First Aid</a>
+				<a href="#" class="hover:text-green-600">Skin Care</a>
+				<a href="#" class="hover:text-green-600">Child and Baby Care</a>
+				<a href="#" class="hover:text-green-600">Heart Health</a>
+				<a href="#" class="hover:text-green-600">Eye and Ear Care</a>
+				<a href="#" class="hover:text-green-600">Respiratory Health</a>
+			</nav>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="bg-green-800 text-white">
+			<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 py-16 gap-10">
+
+				<!-- Left Content -->
+				<div class="flex-1">
+					<h2 class="text-4xl md:text-5xl font-bold mb-6 leading-snug">
+						Your Prescription for <br> Affordable Health Solutions!
+					</h2>
+					<p class="mb-8 text-lg text-gray-200">
+						Elevate your health journey with exclusive discounts and unparalleled convenience. 
+						Your path to well-being starts here, where every purchase is a prescription for savings.
+					</p>
+					<a href="#"
+						class="bg-white text-green-700 px-8 py-4 rounded-md text-lg font-semibold shadow hover:bg-gray-100">
+						Start Shopping
+					</a>
+				</div>
+
+				<!-- Right Image -->
+				<div class="flex-1 flex justify-center">
+					<img src="https://i.ibb.co/VJp8Q2B/doctor.png" alt="Doctor" class="max-h-96 object-contain">
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-3 gap-6 text-lg">
+			<div class="flex items-center gap-3 bg-green-50 rounded-lg p-5">
+				<span class="text-green-600 text-3xl">🏷️</span>
+				<p class="font-semibold">Get 25% OFF</p>
+			</div>
+			<div class="flex items-center gap-3 bg-yellow-50 rounded-lg p-5">
+				<span class="text-yellow-600 text-3xl">🚚</span>
+				<p class="font-semibold">Free Home Delivery</p>
+			</div>
+			<div class="flex items-center gap-3 bg-purple-50 rounded-lg p-5">
+				<span class="text-purple-600 text-3xl">🩺</span>
+				<p class="font-semibold">Health Advice</p>
+			</div>
+		</section>
+		<!-- Prescription & Consultation Section -->
+		<section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+			<!-- Upload Prescription -->
+			<div class="bg-yellow-200 p-6 rounded-2xl shadow-md flex flex-col justify-between">
+				<div>
+					<h3 class="text-2xl font-bold mb-3">Upload prescription to place order</h3>
+					<p class="text-gray-700 mb-4">Upload only .jpg, .png or .pdf files. Size limit is 15 MB</p>
+				</div>
+				<div class="flex flex-wrap gap-3 items-center">
+					<button class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800">
+						Order Via Prescription
+					</button>
+					<a href="#" class="text-sm underline text-gray-800 hover:text-gray-600">How to order?</a>
+				</div>
+			</div>
+
+			<!-- Request Medicine -->
+			<div class="bg-orange-200 p-6 rounded-2xl shadow-md flex flex-col justify-between">
+				<div>
+					<h3 class="text-2xl font-bold mb-3">Can’t Find a Medicine?</h3>
+					<p class="text-gray-700 mb-4">
+						If your medicine is not available in stock, request it and we’ll notify you once it’s added.
+					</p>
+				</div>
+				<button class="bg-purple-900 text-white px-6 py-2 rounded-full hover:bg-purple-800 self-start">
+					Request Medicine
+				</button>
+			</div>
+
+		</section>
+
+		<!-- Product Sections -->
+		<section class="max-w-7xl mx-auto px-6 py-12">
+			<div class="flex justify-between items-center mb-8">
+				<h2 class="text-2xl font-bold">New Products</h2>
+				<a href="#" class="text-green-600 text-lg font-semibold flex items-center gap-1">View All →</a>
+			</div>
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-lg">
+				<!-- Product Card Example -->
+				<div class="border rounded-lg shadow-sm overflow-hidden">
+					<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Foley Catheter" class="w-full h-44 object-contain p-2">
+					<div class="p-4">
+						<h3 class="font-medium">Foley Catheter</h3>
+						<p class="text-gray-600 mb-2">$12.90</p>
+						<button class="bg-green-600 text-white w-full py-3 rounded hover:bg-green-700">Add to Cart</button>
+					</div>
+				</div>
+				<div class="border rounded-lg shadow-sm overflow-hidden">
+					<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Foley Catheter" class="w-full h-44 object-contain p-2">
+					<div class="p-4">
+						<h3 class="font-medium">Foley Catheter</h3>
+						<p class="text-gray-600 mb-2">$12.90</p>
+						<button class="bg-green-600 text-white w-full py-3 rounded hover:bg-green-700">Add to Cart</button>
+					</div>
+				</div>
+				<div class="border rounded-lg shadow-sm overflow-hidden">
+					<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Foley Catheter" class="w-full h-44 object-contain p-2">
+					<div class="p-4">
+						<h3 class="font-medium">Foley Catheter</h3>
+						<p class="text-gray-600 mb-2">$12.90</p>
+						<button class="bg-green-600 text-white w-full py-3 rounded hover:bg-green-700">Add to Cart</button>
+					</div>
+				</div>
+				<div class="border rounded-lg shadow-sm overflow-hidden">
+					<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Foley Catheter" class="w-full h-44 object-contain p-2">
+					<div class="p-4">
+						<h3 class="font-medium">Foley Catheter</h3>
+						<p class="text-gray-600 mb-2">$12.90</p>
+						<button class="bg-green-600 text-white w-full py-3 rounded hover:bg-green-700">Add to Cart</button>
+					</div>
+				</div>
+				<!-- Repeat for other products... -->
+			</div>
+		</section>
+
+
+		<!-- Featured Brands -->
+		<section class="max-w-7xl mx-auto px-6 py-12">
+			<div class="flex justify-between items-center mb-6">
+				<h2 class="text-2xl font-bold">Featured Brands</h2>
+				<a href="#" class="text-blue-700 hover:underline text-sm font-medium">SEE ALL →</a>
+			</div>
+
+			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+				<div class="flex flex-col items-center">
+					<div class="w-[90%] h-[90%] flex items-center justify-center bg-gray-100">
+						<img src="https://i.ibb.co/VJp8Q2B/doctor.png" alt="brand" class="max-h-full max-w-full object-contain">
+					</div>
+					<p class="mt-2 text-sm font-medium">GSK</p>
+				</div>
+
+				<div class="flex flex-col items-center">
+					<div class="w-[90%] h-[90%] flex items-center justify-center bg-gray-100">
+						<img src="https://i.ibb.co/VJp8Q2B/doctor.png" alt="brand" class="max-h-full max-w-full object-contain">
+					</div>
+					<p class="mt-2 text-sm font-medium">ABC</p>
+				</div>
+
+				<div class="flex flex-col items-center">
+					<div class="w-[90%] h-[90%] flex items-center justify-center bg-gray-100">
+						<img src="https://i.ibb.co/VJp8Q2B/doctor.png" alt="brand" class="max-h-full max-w-full object-contain">
+					</div>
+					<p class="mt-2 text-sm font-medium">DEF</p>
+				</div>
+
+				<div class="flex flex-col items-center">
+					<div class="w-[90%] h-[90%] flex items-center justify-center bg-gray-100">
+						<img src="https://i.ibb.co/VJp8Q2B/doctor.png" alt="brand" class="max-h-full max-w-full object-contain">
+					</div>
+					<p class="mt-2 text-sm font-medium">SOME</p>
+				</div>
+			</div>
+		</section>
+		<!-- Offer Section -->
+		<section class="max-w-7xl mx-auto px-6 py-16 bg-gray-50 rounded-lg">
+			<div class="flex flex-col md:flex-row items-center justify-between gap-12">
+				<div class="flex-1">
+					<p class="text-gray-500 text-lg mb-2">Todays Hot Offer</p>
+					<h2 class="text-4xl font-extrabold text-gray-900 mb-6">
+						Unlock 50% Off on <br> Essential Medicines!
+					</h2>
+					<p class="text-gray-700 text-lg mb-8">
+						Embrace wellness without breaking the bank! Enjoy a generous discount 
+						on a wide range of vital medicines at our online pharmacy. 
+						Your health matters, and so does your budget.
+					</p>
+					<a href="#"
+						class="inline-flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-md text-lg shadow hover:bg-green-700">
+						Place An Order Now →
+					</a>
+				</div>
+				<div class="flex-1 flex justify-center">
+					<img src="https://i.ibb.co/NtpXwpg/capsule.png" alt="Medicine Offer" class="max-h-80 object-contain">
+				</div>
+			</div>
+		</section>
+
+		<!-- Blogs Section -->
+		<section class="max-w-7xl mx-auto px-6 py-16">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Latest News & Blogs</h2>
+			<!-- Blog grid same structure, but with larger text-lg sizes -->
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<!-- Left Big Blog -->
+				<div class="bg-white border rounded-lg shadow-sm overflow-hidden">
+					<img src="https://i.ibb.co/5MXXyHT/blog1.png" alt="Blog Main" class="w-full h-56 object-cover">
+					<div class="p-5">
+						<div class="flex items-center gap-3 text-sm text-gray-500 mb-3">
+							<span class="text-green-600 font-semibold">Doctor</span>
+							<span>📅 24 Dec, 2023</span>
+						</div>
+						<h3 class="text-lg font-bold mb-2">
+							In this section, we delve into various aspects of health
+						</h3>
+						<p class="text-gray-600 text-sm mb-4">
+							Explore the world of medical specialties through our blog’s spotlight feature. 
+							From cardiology to pediatrics, we share in-depth articles written by our expert physicians.
+						</p>
+						<a href="#" class="bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700">
+							Read More
+						</a>
+					</div>
+				</div>
+
+				<!-- Right Side Small Blogs -->
+				<div class="grid gap-6">
+					<!-- Blog Item -->
+					<div class="bg-white border rounded-lg shadow-sm overflow-hidden flex gap-4">
+						<img src="https://i.ibb.co/vYFhgVC/blog2.png" alt="Blog" class="w-32 h-28 object-cover">
+						<div class="p-3">
+							<div class="flex items-center gap-3 text-xs text-gray-500 mb-1">
+								<span class="text-green-600 font-semibold">Doctor</span>
+								<span>📅 24 Dec, 2023</span>
+							</div>
+							<h4 class="text-sm font-bold mb-1">
+								Discover a treasure trove of practical tips for enhancing
+							</h4>
+							<p class="text-xs text-gray-600 mb-2">
+								From nutrition advice to exercise routines, we’re here to support your journey toward a healthier life.
+							</p>
+							<a href="#" class="text-green-600 text-xs font-semibold">Read More</a>
+						</div>
+					</div>
+
+					<div class="bg-white border rounded-lg shadow-sm overflow-hidden flex gap-4">
+						<img src="https://i.ibb.co/0f6kTbL/blog3.png" alt="Blog" class="w-32 h-28 object-cover">
+						<div class="p-3">
+							<div class="flex items-center gap-3 text-xs text-gray-500 mb-1">
+								<span class="text-green-600 font-semibold">Doctor</span>
+								<span>📅 24 Dec, 2023</span>
+							</div>
+							<h4 class="text-sm font-bold mb-1">
+								Our patients’ journeys are filled with courage, resilience, and triumph.
+							</h4>
+							<p class="text-xs text-gray-600 mb-2">
+								Inspiring narratives of individuals who have overcome health challenges.
+							</p>
+							<a href="#" class="text-green-600 text-xs font-semibold">Read More</a>
+						</div>
+					</div>
+
+					<div class="bg-white border rounded-lg shadow-sm overflow-hidden flex gap-4">
+						<img src="https://i.ibb.co/XV8CqvM/blog4.png" alt="Blog" class="w-32 h-28 object-cover">
+						<div class="p-3">
+							<div class="flex items-center gap-3 text-xs text-gray-500 mb-1">
+								<span class="text-green-600 font-semibold">Doctor</span>
+								<span>📅 24 Dec, 2023</span>
+							</div>
+							<h4 class="text-sm font-bold mb-1">
+								From organizing health fairs to partnering with local organizations
+							</h4>
+							<p class="text-xs text-gray-600 mb-2">
+								Find out how you can participate in community events and contribute to health awareness.
+							</p>
+							<a href="#" class="text-green-600 text-xs font-semibold">Read More</a>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- Map Section -->
+		<section class="max-w-7xl mx-auto px-6 py-12">
+			<h2 class="text-2xl font-bold mb-6">Find Us Here</h2>
+			<div class="w-full h-96 rounded-lg overflow-hidden shadow-md">
+				<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4089.0884842536816!2d80.2240449753002!3d13.057404887265923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267222bafd67d%3A0x19bf1412252fa3ba!2smedicine!5e1!3m2!1sen!2sin!4v1756658590290!5m2!1sen!2sin"
+					width="100%" 
+					height="100%" 
+					style="border:0;" 
+					allowfullscreen="" 
+					loading="lazy" 
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+		</section>
+		<!-- Footer -->
+		<footer class="bg-green-900 text-gray-100 mt-12">
+			<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-lg">
+
+				<!-- Contact -->
+				<div>
+					<h4 class="font-bold mb-3 text-xl">Contact</h4>
+					<p>27/1 , Minor Trustapuram , Kodambakkam , Chennai</p>
+					<p>+91 7598982124</p>
+					<p>something@gmail.com</p>
+				</div>
+
+				<!-- Quick Links -->
+				<div>
+					<h4 class="font-bold mb-3 text-xl">Quick Links</h4>
+					<ul class="space-y-2">
+						<li><a href="#" class="hover:text-green-300">Home</a></li>
+						<li><a href="#" class="hover:text-green-300">About</a></li>
+						<li><a href="#" class="hover:text-green-300">Services</a></li>
+						<li><a href="#" class="hover:text-green-300">Careers</a></li>
+						<li><a href="#" class="hover:text-green-300">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Specialties -->
+				<div>
+					<h4 class="font-bold mb-3">Specialties</h4>
+					<ul class="space-y-1 text-sm">
+						<li>Anesthesiology</li>
+						<li>Psychiatry</li>
+						<li>General Surgery</li>
+						<li>Family Medicine</li>
+						<li>Pediatrics</li>
+					</ul>
+				</div>
+
+				<!-- Services -->
+				<div>
+					<h4 class="font-bold mb-3">Services</h4>
+					<ul class="space-y-1 text-sm">
+						<li>Medical</li>
+						<li>Operation</li>
+						<li>Laboratory</li>
+						<li>ICU</li>
+						<li>Patient Ward</li>
+					</ul>
+				</div>
+
+				<!-- Social Media -->
+				<div>
+					<h4 class="font-bold mb-3">Social Media</h4>
+					<div class="flex gap-3 text-lg">
+						<a href="#" class="hover:text-green-300">
+							<i class="fa-brands fa-instagram"></i>
+						</a>
+						<a href="#" class="hover:text-green-300">
+							<i class="fa-solid fa-link"></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Bottom Bar -->
+			<div class="bg-green-950 text-gray-400 text-base py-6 px-6 flex flex-col md:flex-row justify-between items-center">
+				<p>© 2023 HEALTHY. All rights reserved.</p>
+				<div class="flex gap-6 mt-3 md:mt-0">
+					<a href="#" class="hover:text-green-300">Terms and Conditions</a>
+					<a href="#" class="hover:text-green-300">Privacy Policy</a>
+				</div>
+			</div>
+		</footer>
+		<script src="index.js">
+		</script>
+	</body>
+</html>

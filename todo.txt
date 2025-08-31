@@ -1,0 +1,14 @@
+- [x] home-page ui 
+- [] about page
+- [] interactions
+- [] login/signup page
+- [] dynamic content
+- [] shopping page
+- [] search functionality
+- [] upload prescription
+- [] cart page
+- [] payment page
+---
+- [] admin page ui
+---
+- [] pharmacist page ui
