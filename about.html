@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About Us | Medico Store</title>
+		<link rel="stylesheet" href="index.css">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+		tailwind.config = {
+		darkMode: 'class',
+		}
+		</script>
+		<link rel="icon" href="stethoscope.ico">
+	</head>
+	<body class="font-[Open_Sans] bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+		<!-- Header (same as homepage) -->
+		<header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow border-b border-gray-200 dark:border-gray-700">
+			<div class="flex flex-col md:flex-row items-center justify-evenly px-6 py-4 gap-4">
+				<!-- Logo -->
+				<div class="flex items-center gap-2">
+					<div class="text-green-600 text-3xl font-bold">🩺</div>
+					<h1 class="text-2xl md:text-3xl font-bold text-green-700">
+						Medico <span class="text-gray-700">Store</span>
+					</h1>
+				</div>
+
+				<!-- Delivery Address -->
+				<div class="flex items-center gap-2 text-gray-700 dark:text-gray-200 cursor-pointer">
+					📍
+					<div class="flex flex-col leading-tight">
+						<span class="text-xs text-gray-500">Deliver to</span>
+						<span class="font-semibold text-sm md:text-base">Bengaluru, 560001</span>
+					</div>
+				</div>
+
+				<!-- Search Bar -->
+				<div class="flex items-center w-full md:w-1/2">
+					<select class="border rounded-l px-4 py-3 text-base text-gray-600 dark:bg-gray-700 dark:text-gray-200">
+						<option>All Categories</option>
+						<option>Medicines</option>
+						<option>Health Products</option>
+					</select>
+					<input type="text" placeholder="Search..." 
+						class="w-full border-t border-b px-4 py-3 text-base outline-none dark:bg-gray-700 dark:text-gray-200">
+					<button class="bg-green-600 px-5 py-3 rounded-r text-white text-lg hover:bg-green-700">🔍</button>
+				</div>
+
+				<!-- Icons -->
+				<div class="flex items-center gap-6 text-gray-600 text-2xl cursor-pointer">
+					<!-- Offers -->
+					<div class="relative group">
+						<i class="fa-solid fa-tags hover:text-gray-800 transition"></i>
+						<span class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">5</span>
+						<span class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">Offers</span>
+					</div>
+					<!-- Cart -->
+					<div class="relative group">
+						<i class="fa-solid fa-cart-shopping hover:text-gray-800 transition"></i>
+						<span class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">3</span>
+						<span class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">Cart</span>
+					</div>
+					<!-- Profile -->
+					<div class="relative group">
+						<i class="fa-solid fa-user hover:text-gray-800 transition"></i>
+						<span class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">Profile</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero -->
+		<section class="bg-green-800 text-white">
+			<div class="max-w-7xl mx-auto flex flex-col items-center px-6 py-16 text-center">
+				<h2 class="text-4xl md:text-5xl font-bold mb-6">About Medico Store</h2>
+				<p class="max-w-3xl text-lg text-gray-200">
+					Your trusted partner in healthcare. We bring medicines, wellness products, and 
+					healthcare essentials closer to you with just a click.
+				</p>
+			</div>
+		</section>
+
+		<!-- Mission -->
+		<section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+			<img src="https://img.freepik.com/free-vector/medical-healthcare-concept-illustration_23-2148844279.jpg" 
+				alt="Healthcare" 
+				class="rounded-2xl shadow-md">
+			<div>
+				<h2 class="text-3xl font-bold text-green-700 dark:text-green-400 mb-4">Our Mission</h2>
+				<p class="text-2xl text-gray-600 dark:text-gray-300 mb-4">
+					At <strong>Medico Store</strong>, our mission is to make healthcare accessible and affordable 
+					for everyone. We aim to bridge the gap between pharmacies and customers by providing 
+					doorstep delivery of medicines and medical essentials.
+				</p>
+				<p class="text-gray-600 dark:text-gray-300">
+					With trusted suppliers and verified pharmacists, we ensure that every product delivered 
+					is genuine, safe, and affordable.
+				</p>
+			</div>
+		</section>
+
+		<!-- Values -->
+		<section class="bg-gray-100 dark:bg-gray-800 py-16 px-6">
+			<div class="max-w-7xl mx-auto text-center">
+				<h2 class="text-3xl font-bold text-green-700 dark:text-green-400 mb-10">Our Core Values</h2>
+				<div class="grid md:grid-cols-3 gap-8">
+					<div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+						<h3 class="text-xl font-semibold mb-3">💊 Quality</h3>
+						<p class="text-gray-600 dark:text-gray-300">Only genuine, certified medicines and healthcare products.</p>
+					</div>
+					<div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+						<h3 class="text-xl font-semibold mb-3">🚚 Accessibility</h3>
+						<p class="text-gray-600 dark:text-gray-300">Fast and reliable doorstep delivery across regions.</p>
+					</div>
+					<div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+						<h3 class="text-xl font-semibold mb-3">❤️ Care</h3>
+						<p class="text-gray-600 dark:text-gray-300">Because your health is our top priority.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team -->
+		<section class="max-w-7xl mx-auto px-6 py-16 text-center">
+			<h2 class="text-3xl font-bold text-green-700 dark:text-green-400 mb-8">Meet Our Team</h2>
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+					<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Founder" class="w-28 h-28 rounded-full mx-auto mb-4">
+					<h3 class="text-xl font-semibold">Dr. John Smith</h3>
+					<p class="text-gray-500 dark:text-gray-400">Founder & CEO</p>
+				</div>
+				<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+					<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Pharmacist" class="w-28 h-28 rounded-full mx-auto mb-4">
+					<h3 class="text-xl font-semibold">Dr. Sarah Johnson</h3>
+					<p class="text-gray-500 dark:text-gray-400">Chief Pharmacist</p>
+				</div>
+				<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+					<img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Tech Lead" class="w-28 h-28 rounded-full mx-auto mb-4">
+					<h3 class="text-xl font-semibold">Mark Lee</h3>
+					<p class="text-gray-500 dark:text-gray-400">Tech Lead</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-green-900 text-gray-100 mt-12">
+			<div class="max-w-7xl mx-auto px-6 py-12 text-center text-lg">
+				<p>&copy; 2025 Medico Store. All rights reserved.</p>
+			</div>
+		</footer>
+
+	</body>
+</html>
+

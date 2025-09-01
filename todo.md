@@ -1,7 +1,7 @@
 - [x] home-page ui 
-- [] about page
+- [x] about page
 - [] interactions
-- [] login/signup page
+- [x] login/signup page
 - [] dynamic content
 - [] shopping page
 - [] search functionality
