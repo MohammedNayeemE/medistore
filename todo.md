@@ -6,9 +6,12 @@
 - [] shopping page
 - [] search functionality
 - [] upload prescription
-- [] cart page
+- [x] cart page
 - [] payment page
+- [] 404 page
+- [] 500 page
 ---
 - [] admin page ui
+- [] dashboard
 ---
 - [] pharmacist page ui
