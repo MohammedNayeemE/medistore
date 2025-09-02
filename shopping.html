@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Products - Medico Store</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+		tailwind.config = {
+		darkMode: 'class',
+		}
+		</script>
+		<link rel="icon" href="stethoscope.ico">
+		<style>
+		body {
+			font-family: 'Open Sans', sans-serif;
+		}
+		</style>
+	</head>
+	<body class="font-[Open_Sans] bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+		<header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow border-b border-gray-200 dark:border-gray-700">
+			<div class="flex flex-col md:flex-row items-center justify-evenly px-6 py-4 gap-4">
+
+				<!-- Logo -->
+				<div class="flex items-center gap-2">
+					<div class="text-green-600 text-3xl font-bold">🩺</div>
+					<h1 class="text-2xl md:text-3xl font-bold text-green-700">
+						Medico <span class="text-gray-700">Store</span>
+					</h1>
+				</div>
+
+				<!-- Delivery Address -->
+				<div class="flex items-center gap-2 text-gray-700 dark:text-gray-200 cursor-pointer">
+					📍
+					<div class="flex flex-col leading-tight">
+						<span class="text-xs text-gray-500">Deliver to</span>
+						<span class="font-semibold text-sm md:text-base">Bengaluru, 560001</span>
+					</div>
+				</div>
+
+				<!-- Search Bar -->
+				<div class="flex items-center w-full md:w-1/2">
+					<select class="border rounded-l px-4 py-3 text-base text-gray-600 dark:bg-gray-700 dark:text-gray-200">
+						<option>All Categories</option>
+						<option>Medicines</option>
+						<option>Health Products</option>
+					</select>
+					<input type="text" placeholder="Search..." 
+						class="w-full border-t border-b px-4 py-3 text-base outline-none dark:bg-gray-700 dark:text-gray-200">
+					<button class="bg-green-600 px-5 py-3 rounded-r text-white text-lg hover:bg-green-700">🔍</button>
+				</div>
+
+
+				<div class="flex items-center gap-6 text-gray-600 text-2xl cursor-pointer">
+					<!-- Offers Icon -->
+					<div class="relative group">
+						<i class="fa-solid fa-tags hover:text-gray-800 transition"></i>
+						<!-- Badge -->
+						<span class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">5</span>
+						<!-- Tooltip -->
+						<span class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">
+							Offers
+						</span>
+					</div>
+					<!-- Cart Icon -->
+					<div class="relative group">
+						<i class="fa-solid fa-cart-shopping hover:text-gray-800 transition"></i>
+						<!-- Badge -->
+						<span class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">3</span>
+						<!-- Tooltip -->
+						<span class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">
+							Cart
+						</span>
+					</div>
+
+					<!-- User Icon -->
+					<div class="relative group">
+						<i class="fa-solid fa-user hover:text-gray-800 transition"></i>
+						<!-- Tooltip -->
+						<span class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">
+							Profile
+						</span>
+					</div>
+					<!--<button-->
+					<!--	onclick="toggleTheme()"-->
+					<!--	class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-300 hover:scale-110 transition"-->
+					<!--	id = "togglebtn"-->
+					<!-->
+					<!--	<i class="fa-solid fa-sun dark:hidden"></i>-->
+					<!--	<i class="fa-solid fa-moon hidden dark:inline"></i>-->
+					<!--</button>-->
+
+				</div>
+			</div>
+
+			<!-- Nav Links -->
+			<nav class="flex flex-wrap justify-center gap-4 md:gap-6 text-lg text-gray-700 py-3 border-t">
+				<a href="#" class="hover:text-green-600">Pain Relief</a>
+				<a href="#" class="hover:text-green-600">Cold and Flu</a>
+				<a href="#" class="hover:text-green-600">Diabetes Care</a>
+				<a href="#" class="hover:text-green-600">Digestive Health</a>
+				<a href="#" class="hover:text-green-600">First Aid</a>
+				<a href="#" class="hover:text-green-600">Skin Care</a>
+				<a href="#" class="hover:text-green-600">Child and Baby Care</a>
+				<a href="#" class="hover:text-green-600">Heart Health</a>
+				<a href="#" class="hover:text-green-600">Eye and Ear Care</a>
+				<a href="#" class="hover:text-green-600">Respiratory Health</a>
+			</nav>
+		</header>
+
+
+		<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+			<div class="flex flex-col lg:flex-row gap-8">
+				<aside class="lg:w-1/4 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+					<h2 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-6">Filters</h2>
+
+					<div class="mb-6">
+						<h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-3">Categories</h3>
+						<div class="space-y-2">
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Medications</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Wellness</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Medical Devices</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-3">Brands</h3>
+						<div class="space-y-2">
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Apollo</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Himalaya</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Dettol</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">P&G</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-3">Age Group</h3>
+						<div class="space-y-2">
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">All Ages</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Adults</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Kids</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-3">Gender</h3>
+						<div class="space-y-2">
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Male</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Female</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Unisex</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-3">Product Form</h3>
+						<div class="space-y-2">
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Tablets</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Syrup</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Cream</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" class="form-checkbox text-green-600 rounded-sm">
+								<span class="ml-2 text-gray-600 dark:text-gray-400">Liquid</span>
+							</label>
+						</div>
+					</div>
+
+					<button class="w-full bg-green-600 text-white py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">Apply Filters</button>
+				</aside>
+
+				<section class="flex-1">
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden flex flex-col items-center p-6 text-center">
+							<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Apollo Hand Wash" class="w-32 h-32 object-contain mb-4">
+							<h3 class="font-medium text-lg mb-1">Apollo Hand Wash, 500 ml</h3>
+							<p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Pack Of 2</p>
+							<div class="flex items-center gap-2 mb-3">
+								<span class="text-gray-400 line-through">₹320</span>
+								<span class="font-bold text-lg">₹198</span>
+								<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">38% off</span>
+							</div>
+							<button class="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">
+								<i class="fa-solid fa-plus mr-2"></i>Add to Cart
+							</button>
+						</div>
+
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden flex flex-col items-center p-6 text-center relative">
+							<span class="absolute top-2 left-2 bg-purple-50 text-purple-900 px-2 py-1 rounded-full text-xs font-medium">
+								<i class="fa-solid fa-file-medical mr-1"></i>Prescribed
+							</span>
+							<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Pain Relief Tablets" class="w-32 h-32 object-contain mb-4">
+							<h3 class="font-medium text-lg mb-1">Pain Relief Tablets</h3>
+							<p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Pack of 10</p>
+							<div class="flex items-center gap-2 mb-3">
+								<span class="font-bold text-lg">₹50</span>
+							</div>
+							<button class="bg-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-purple-700 transition-colors">
+								<i class="fa-solid fa-file-arrow-up mr-2"></i>Upload Rx
+							</button>
+						</div>
+
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden flex flex-col items-center p-6 text-center relative opacity-60">
+							<span class="absolute top-2 left-2 bg-red-50 text-red-600 px-2 py-1 rounded-full text-xs font-medium">
+								<i class="fa-solid fa-box-open mr-1"></i>Out of Stock
+							</span>
+							<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="N95 Face Mask" class="w-32 h-32 object-contain mb-4">
+							<h3 class="font-medium text-lg mb-1">N95 Face Mask</h3>
+							<p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Pack of 5</p>
+							<div class="flex items-center gap-2 mb-3">
+								<span class="font-bold text-lg">₹250</span>
+							</div>
+							<button class="bg-gray-400 text-white px-4 py-2 rounded-lg font-medium cursor-not-allowed">
+								<i class="fa-solid fa-minus-circle mr-2"></i>Unavailable
+							</button>
+						</div>
+
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden flex flex-col items-center p-6 text-center">
+							<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Dettol Hand Sanitizer" class="w-32 h-32 object-contain mb-4">
+							<h3 class="font-medium text-lg mb-1">Dettol Hand Sanitizer, 200 ml</h3>
+							<p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Single Unit</p>
+							<div class="flex items-center gap-2 mb-3">
+								<span class="text-gray-400 line-through">₹150</span>
+								<span class="font-bold text-lg">₹120</span>
+								<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">20% off</span>
+							</div>
+							<button class="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">
+								<i class="fa-solid fa-plus mr-2"></i>Add to Cart
+							</button>
+						</div>
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden flex flex-col items-center p-6 text-center">
+							<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Apollo Hand Wash" class="w-32 h-32 object-contain mb-4">
+							<h3 class="font-medium text-lg mb-1">Apollo Hand Wash, 500 ml</h3>
+							<p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Pack Of 2</p>
+							<div class="flex items-center gap-2 mb-3">
+								<span class="text-gray-400 line-through">₹320</span>
+								<span class="font-bold text-lg">₹198</span>
+								<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">38% off</span>
+							</div>
+							<button class="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">
+								<i class="fa-solid fa-plus mr-2"></i>Add to Cart
+							</button>
+						</div>
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden flex flex-col items-center p-6 text-center">
+							<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Apollo Hand Wash" class="w-32 h-32 object-contain mb-4">
+							<h3 class="font-medium text-lg mb-1">Apollo Hand Wash, 500 ml</h3>
+							<p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Pack Of 2</p>
+							<div class="flex items-center gap-2 mb-3">
+								<span class="text-gray-400 line-through">₹320</span>
+								<span class="font-bold text-lg">₹198</span>
+								<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">38% off</span>
+							</div>
+							<button class="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">
+								<i class="fa-solid fa-plus mr-2"></i>Add to Cart
+							</button>
+						</div>
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden flex flex-col items-center p-6 text-center">
+							<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Apollo Hand Wash" class="w-32 h-32 object-contain mb-4">
+							<h3 class="font-medium text-lg mb-1">Apollo Hand Wash, 500 ml</h3>
+							<p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Pack Of 2</p>
+							<div class="flex items-center gap-2 mb-3">
+								<span class="text-gray-400 line-through">₹320</span>
+								<span class="font-bold text-lg">₹198</span>
+								<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">38% off</span>
+							</div>
+							<button class="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">
+								<i class="fa-solid fa-plus mr-2"></i>Add to Cart
+							</button>
+						</div>
+					</div>
+
+					<div class="mt-8 flex justify-center items-center gap-2">
+						<a href="#" class="w-8 h-8 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+							<i class="fa-solid fa-chevron-left"></i>
+						</a>
+						<a href="#" class="w-8 h-8 rounded-full flex items-center justify-center bg-green-600 text-white font-medium">1</a>
+						<a href="#" class="w-8 h-8 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">2</a>
+						<a href="#" class="w-8 h-8 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">3</a>
+						<span class="text-gray-500 dark:text-gray-400">...</span>
+						<a href="#" class="w-8 h-8 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+							<i class="fa-solid fa-chevron-right"></i>
+						</a>
+					</div>
+				</section>
+			</div>
+		</main>
+		<!-- Footer -->
+		<footer class="bg-green-900 text-gray-100 mt-12">
+			<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-lg">
+
+				<!-- Contact -->
+				<div>
+					<h4 class="font-bold mb-3 text-xl">Contact</h4>
+					<p>27/1 , Minor Trustapuram , Kodambakkam , Chennai</p>
+					<p>+91 7598982124</p>
+					<p>something@gmail.com</p>
+				</div>
+
+				<!-- Quick Links -->
+				<div>
+					<h4 class="font-bold mb-3 text-xl">Quick Links</h4>
+					<ul class="space-y-2">
+						<li><a href="#" class="hover:text-green-300">Home</a></li>
+						<li><a href="#" class="hover:text-green-300">About</a></li>
+						<li><a href="#" class="hover:text-green-300">Services</a></li>
+						<li><a href="#" class="hover:text-green-300">Careers</a></li>
+						<li><a href="#" class="hover:text-green-300">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Specialties -->
+				<div>
+					<h4 class="font-bold mb-3">Specialties</h4>
+					<ul class="space-y-1 text-sm">
+						<li>Anesthesiology</li>
+						<li>Psychiatry</li>
+						<li>General Surgery</li>
+						<li>Family Medicine</li>
+						<li>Pediatrics</li>
+					</ul>
+				</div>
+
+				<!-- Services -->
+				<div>
+					<h4 class="font-bold mb-3">Services</h4>
+					<ul class="space-y-1 text-sm">
+						<li>Medical</li>
+						<li>Operation</li>
+						<li>Laboratory</li>
+						<li>ICU</li>
+						<li>Patient Ward</li>
+					</ul>
+				</div>
+
+				<!-- Social Media -->
+				<div>
+					<h4 class="font-bold mb-3">Social Media</h4>
+					<div class="flex gap-3 text-lg">
+						<a href="#" class="hover:text-green-300">
+							<i class="fa-brands fa-instagram"></i>
+						</a>
+						<a href="#" class="hover:text-green-300">
+							<i class="fa-solid fa-link"></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Bottom Bar -->
+			<div class="bg-green-950 text-gray-400 text-base py-6 px-6 flex flex-col md:flex-row justify-between items-center">
+				<p>© 2023 HEALTHY. All rights reserved.</p>
+				<div class="flex gap-6 mt-3 md:mt-0">
+					<a href="#" class="hover:text-green-300">Terms and Conditions</a>
+					<a href="#" class="hover:text-green-300">Privacy Policy</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

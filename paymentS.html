@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Payment Confirmed - Medico Store</title>
+		<link rel="stylesheet" href="index.css">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				darkMode: 'class',
+		}
+		</script>	
+		<link rel="icon" href="stethoscope.ico">
+	</head>
+	<body class="font-[Open_Sans] bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+		<!--<header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow border-b border-gray-200 dark:border-gray-700">-->
+		<!--	<div class="flex flex-col md:flex-row items-center justify-evenly px-6 py-4 gap-4">-->
+		<!---->
+		<!--		<!-- Logo -->-->
+		<!--		<div class="flex items-center gap-2">-->
+		<!--			<div class="text-green-600 text-3xl font-bold">🩺</div>-->
+		<!--			<h1 class="text-2xl md:text-3xl font-bold text-green-700">-->
+		<!--				Medico <span class="text-gray-700">Store</span>-->
+		<!--			</h1>-->
+		<!--		</div>-->
+		<!---->
+		<!--		<!-- Delivery Address -->-->
+		<!--		<div class="flex items-center gap-2 text-gray-700 dark:text-gray-200 cursor-pointer">-->
+		<!--			📍-->
+		<!--			<div class="flex flex-col leading-tight">-->
+		<!--				<span class="text-xs text-gray-500">Deliver to</span>-->
+		<!--				<span class="font-semibold text-sm md:text-base">Bengaluru, 560001</span>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!---->
+		<!--		<!-- Search Bar -->-->
+		<!--		<div class="flex items-center w-full md:w-1/2">-->
+		<!--			<select class="border rounded-l px-4 py-3 text-base text-gray-600 dark:bg-gray-700 dark:text-gray-200">-->
+		<!--				<option>All Categories</option>-->
+		<!--				<option>Medicines</option>-->
+		<!--				<option>Health Products</option>-->
+		<!--			</select>-->
+		<!--			<input type="text" placeholder="Search..." -->
+		<!--				class="w-full border-t border-b px-4 py-3 text-base outline-none dark:bg-gray-700 dark:text-gray-200">-->
+		<!--			<button class="bg-green-600 px-5 py-3 rounded-r text-white text-lg hover:bg-green-700">🔍</button>-->
+		<!--		</div>-->
+		<!---->
+		<!--		<div class="flex items-center gap-6 text-gray-600 text-2xl cursor-pointer">-->
+		<!--			<!-- Offers Icon -->-->
+		<!--			<div class="relative group">-->
+		<!--				<i class="fa-solid fa-tags hover:text-gray-800 transition"></i>-->
+		<!--				<span class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">5</span>-->
+		<!--			</div>-->
+		<!--			<!-- Cart Icon -->-->
+		<!--			<div class="relative group">-->
+		<!--				<i class="fa-solid fa-cart-shopping hover:text-gray-800 transition"></i>-->
+		<!--				<span class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">0</span>-->
+		<!--			</div>-->
+		<!--			<!-- User Icon -->-->
+		<!--			<div class="relative group">-->
+		<!--				<i class="fa-solid fa-user hover:text-gray-800 transition"></i>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!---->
+		<!--	<!-- Nav Links -->-->
+		<!--	<nav class="flex flex-wrap justify-center gap-4 md:gap-6 text-lg text-gray-700 py-3 border-t">-->
+		<!--		<a href="#" class="hover:text-green-600">Pain Relief</a>-->
+		<!--		<a href="#" class="hover:text-green-600">Cold and Flu</a>-->
+		<!--		<a href="#" class="hover:text-green-600">Diabetes Care</a>-->
+		<!--		<a href="#" class="hover:text-green-600">Digestive Health</a>-->
+		<!--		<a href="#" class="hover:text-green-600">First Aid</a>-->
+		<!--		<a href="#" class="hover:text-green-600">Skin Care</a>-->
+		<!--		<a href="#" class="hover:text-green-600">Child and Baby Care</a>-->
+		<!--		<a href="#" class="hover:text-green-600">Heart Health</a>-->
+		<!--		<a href="#" class="hover:text-green-600">Eye and Ear Care</a>-->
+		<!--		<a href="#" class="hover:text-green-600">Respiratory Health</a>-->
+		<!--	</nav>-->
+		<!--</header>-->
+
+		<!-- Progress Bar -->
+		<div class="bg-white border-b">
+			<div class="max-w-7xl mx-auto px-6 py-4">
+				<div class="flex items-center justify-center gap-8">
+					<div class="flex items-center gap-2">
+						<div class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm">✓</div>
+						<span class="font-medium text-green-600">Cart</span>
+					</div>
+					<div class="w-16 h-1 bg-green-600"></div>
+					<div class="flex items-center gap-2">
+						<div class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm">✓</div>
+						<span class="font-medium text-green-600">Payment</span>
+					</div>
+					<div class="w-16 h-1 bg-green-600"></div>
+					<div class="flex items-center gap-2">
+						<div class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm">✓</div>
+						<span class="font-medium text-green-600">Confirmation</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main Success Content -->
+		<main class="max-w-4xl mx-auto px-6 py-12">
+			
+			<!-- Success Message -->
+			<div class="bg-white rounded-lg shadow-sm p-8 text-center mb-8">
+				<div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+					<i class="fa-solid fa-check text-4xl text-green-600"></i>
+				</div>
+				<h1 class="text-3xl font-bold text-green-700 mb-4">Payment Confirmed!</h1>
+				<p class="text-xl text-gray-700 mb-2">Thank you for your order</p>
+				<p class="text-gray-600">Your order has been successfully placed and payment confirmed.</p>
+			</div>
+
+			<!-- Order Details -->
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				
+				<!-- Order Information -->
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h2 class="text-xl font-bold text-blue-900 mb-6">ORDER DETAILS</h2>
+					
+					<div class="space-y-4">
+						<div class="flex justify-between py-2 border-b">
+							<span class="text-gray-600">Order ID:</span>
+							<span class="font-medium">#MED24090001</span>
+						</div>
+						<div class="flex justify-between py-2 border-b">
+							<span class="text-gray-600">Order Date:</span>
+							<span class="font-medium">September 02, 2025</span>
+						</div>
+						<div class="flex justify-between py-2 border-b">
+							<span class="text-gray-600">Payment Method:</span>
+							<span class="font-medium">UPI Payment</span>
+						</div>
+						<div class="flex justify-between py-2 border-b">
+							<span class="text-gray-600">Transaction ID:</span>
+							<span class="font-medium">TXN789456123</span>
+						</div>
+						<div class="flex justify-between py-2">
+							<span class="text-gray-600">Total Amount:</span>
+							<span class="font-bold text-xl text-green-600">₹1984</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Delivery Information -->
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h2 class="text-xl font-bold text-blue-900 mb-6">DELIVERY INFORMATION</h2>
+					
+					<div class="space-y-4">
+						<div>
+							<h3 class="font-medium mb-2">Delivery Address:</h3>
+							<p class="text-gray-700 text-sm">John Doe</p>
+							<p class="text-gray-700 text-sm">123 Brigade Road, MG Road</p>
+							<p class="text-gray-700 text-sm">Bengaluru, Karnataka 560001</p>
+							<p class="text-gray-700 text-sm">Phone: +91 9876543210</p>
+						</div>
+						
+						<div class="bg-green-50 border border-green-200 rounded-lg p-4">
+							<div class="flex items-center gap-2 mb-2">
+								<i class="fa-solid fa-truck text-green-600"></i>
+								<span class="font-medium text-green-700">Expected Delivery: Today</span>
+							</div>
+							<p class="text-green-700 text-sm">Your order will be delivered by 8:00 PM today</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Ordered Items -->
+			<div class="bg-white rounded-lg shadow-sm p-6 mt-8">
+				<h2 class="text-xl font-bold text-blue-900 mb-6">ORDERED ITEMS</h2>
+				
+				<div class="flex items-start gap-4 p-4 border rounded-lg">
+					<img src="https://i.ibb.co/TrHh1H0/foley.png" alt="Apollo Hand Wash" class="w-20 h-20 object-contain">
+					<div class="flex-1">
+						<h3 class="font-medium text-lg mb-1">Apollo Essentials Aqua Blue Hand Wash, 500 ml (2×250 ml)</h3>
+						<p class="text-gray-600 text-sm mb-2">Pack Of 2 • Quantity: 20</p>
+						<div class="flex items-center gap-2">
+							<span class="text-gray-400 line-through">₹3200</span>
+							<span class="font-bold text-lg">₹1984</span>
+							<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">38% off</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Action Buttons -->
+			<div class="flex flex-col md:flex-row justify-center gap-4 mt-8">
+				<button class="bg-green-600 text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-green-700">
+					<i class="fa-solid fa-download mr-2"></i>Download Invoice
+				</button>
+				<button class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-blue-700">
+					<i class="fa-solid fa-truck mr-2"></i>Track Order
+				</button>
+				<button class="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-medium text-lg hover:bg-green-50">
+					<i class="fa-solid fa-shopping-bag mr-2"></i>Continue Shopping
+				</button>
+			</div>
+
+			<!-- Additional Info -->
+			<div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">
+				<div class="flex items-start gap-3">
+					<i class="fa-solid fa-info-circle text-blue-600 mt-1"></i>
+					<div>
+						<h3 class="font-medium text-blue-900 mb-2">What's Next?</h3>
+						<ul class="text-gray-700 text-sm space-y-1">
+							<li>• You'll receive an SMS confirmation shortly</li>
+							<li>• Track your order using the tracking button above</li>
+							<li>• Our delivery partner will contact you before delivery</li>
+							<li>• For any queries, contact us at +91 7598982124</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!---->
+		<!--<!-- Footer -->-->
+		<!--<footer class="bg-green-900 text-gray-100 mt-12">-->
+		<!--	<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-lg">-->
+		<!---->
+		<!--		<!-- Contact -->-->
+		<!--		<div>-->
+		<!--			<h4 class="font-bold mb-3 text-xl">Contact</h4>-->
+		<!--			<p>27/1 , Minor Trustapuram , Kodambakkam , Chennai</p>-->
+		<!--			<p>+91 7598982124</p>-->
+		<!--			<p>something@gmail.com</p>-->
+		<!--		</div>-->
+		<!---->
+		<!--		<!-- Quick Links -->-->
+		<!--		<div>-->
+		<!--			<h4 class="font-bold mb-3 text-xl">Quick Links</h4>-->
+		<!--			<ul class="space-y-2">-->
+		<!--				<li><a href="#" class="hover:text-green-300">Home</a></li>-->
+		<!--				<li><a href="#" class="hover:text-green-300">About</a></li>-->
+		<!--				<li><a href="#" class="hover:text-green-300">Services</a></li>-->
+		<!--				<li><a href="#" class="hover:text-green-300">Careers</a></li>-->
+		<!--				<li><a href="#" class="hover:text-green-300">Contact</a></li>-->
+		<!--			</ul>-->
+		<!--		</div>-->
+		<!---->
+		<!--		<!-- Specialties -->-->
+		<!--		<div>-->
+		<!--			<h4 class="font-bold mb-3">Specialties</h4>-->
+		<!--			<ul class="space-y-1 text-sm">-->
+		<!--				<li>Anesthesiology</li>-->
+		<!--				<li>Psychiatry</li>-->
+		<!--				<li>General Surgery</li>-->
+		<!--				<li>Family Medicine</li>-->
+		<!--				<li>Pediatrics</li>-->
+		<!--			</ul>-->
+		<!--		</div>-->
+		<!---->
+		<!--		<!-- Services -->-->
+		<!--		<div>-->
+		<!--			<h4 class="font-bold mb-3">Services</h4>-->
+		<!--			<ul class="space-y-1 text-sm">-->
+		<!--				<li>Medical</li>-->
+		<!--				<li>Operation</li>-->
+		<!--				<li>Laboratory</li>-->
+		<!--				<li>ICU</li>-->
+		<!--				<li>Patient Ward</li>-->
+		<!--			</ul>-->
+		<!--		</div>-->
+		<!---->
+		<!--		<!-- Social Media -->-->
+		<!--		<div>-->
+		<!--			<h4 class="font-bold mb-3">Social Media</h4>-->
+		<!--			<div class="flex gap-3 text-lg">-->
+		<!--				<a href="#" class="hover:text-green-300">-->
+		<!--					<i class="fa-brands fa-instagram"></i>-->
+		<!--				</a>-->
+		<!--				<a href="#" class="hover:text-green-300">-->
+		<!--					<i class="fa-solid fa-link"></i>-->
+		<!--				</a>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!---->
+		<!--	</div>-->
+		<!---->
+		<!--	<!-- Bottom Bar -->-->
+		<!--	<div class="bg-green-950 text-gray-400 text-base py-6 px-6 flex flex-col md:flex-row justify-between items-center">-->
+		<!--		<p>© 2023 HEALTHY. All rights reserved.</p>-->
+		<!--		<div class="flex gap-6 mt-3 md:mt-0">-->
+		<!--			<a href="#" class="hover:text-green-300">Terms and Conditions</a>-->
+		<!--			<a href="#" class="hover:text-green-300">Privacy Policy</a>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--</footer>-->
+
+		<!--<script>-->
+		<!--	// Auto-redirect to home after 30 seconds-->
+		<!--	setTimeout(() => {-->
+		<!--		const redirect = confirm('Would you like to continue shopping?');-->
+		<!--		if (redirect) {-->
+		<!--			window.location.href = 'index.html';-->
+		<!--		}-->
+		<!--	}, 30000);-->
+		<!---->
+		<!--	// Print invoice functionality-->
+		<!--	document.querySelector('button[class*="Download Invoice"]').addEventListener('click', function() {-->
+		<!--		window.print();-->
+		<!--	});-->
+		<!--</script>-->
+	</body>
+</html>

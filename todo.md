@@ -3,13 +3,13 @@
 - [] interactions
 - [x] login/signup page
 - [] dynamic content
-- [] shopping page
+- [x] shopping page
 - [] search functionality
-- [] upload prescription
+- [x] upload prescription
 - [x] cart page
-- [] payment page
-- [] 404 page
-- [] 500 page
+- [x] payment page
+- [x] 404 page
+- [x] 500 page
 ---
 - [] admin page ui
 - [] dashboard
